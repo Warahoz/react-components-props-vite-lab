@@ -3,7 +3,7 @@
 ## Learning Goals
 
 - Create components that return JSX
-- Use props to make components dynamic
+- Use props to makae components dynamic
 - Transform lists of data into lists of components
 
 ## Overview
@@ -92,3 +92,22 @@ If the article takes 30 minutes or longer to read:
 
 There aren't tests for this feature, so you'll have to rely on running the code
 in the browser to see if your implementation works!
+
+# React Components and Props Lab: Underreacted Blog
+
+A static personal blog website built with React to demonstrate proficiency in creating functional components, writing semantic JSX, and dynamically driving content using one-way data flow (`props`).
+
+---
+
+## 🏗️ Component Tree Structure
+
+The application data originates in `blog.js` and flows downward through the component hierarchy as follows:
+
+```text
+└── App (Imports blogData)
+    ├── Header (Receives: name)
+    ├── About (Receives: image, about)
+    └── ArticleList (Receives: posts array)
+        └── Article (Rendered via .map(), Receives: title, date, preview, minutes)
+
+images/Screenshot 2026-05-18 182207.png
